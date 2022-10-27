@@ -32,20 +32,63 @@
                     <view key="view" contentMode="scaleToFill" id="Iz0-DI-D4Z">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Gp-H9-7Hm" customClass="UITextLabel" customModule="TextKitPlayground" customModuleProvider="target">
+                                <rect key="frame" x="20" y="91" width="350" height="198"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <string key="text">The UIKit framework provides the required infrastructure for your iOS or tvOS apps. It provides the window and view architecture for implementing your interface, the event-handling infrastructure for delivering Multi-Touch and other types of input to your app, and the main run loop needed to manage interactions among the user, the system, and your app.</string>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mvW-di-W0n">
+                                <rect key="frame" x="20" y="91.000000000000014" width="350" height="196.33333333333337"/>
+                                <string key="text">The UIKit framework provides the required infrastructure for your iOS or tvOS apps. It provides the window and view architecture for implementing your interface, the event-handling infrastructure for delivering Multi-Touch and other types of input to your app, and the main run loop needed to manage interactions among the user, the system, and your app.</string>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                <color key="textColor" systemColor="systemRedColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="IY6-Vx-STO"/>
                         <color key="backgroundColor" systemColor="systemGroupedBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="8Gp-H9-7Hm" secondAttribute="trailing" id="9GG-lE-4UI"/>
+                            <constraint firstItem="mvW-di-W0n" firstAttribute="leading" secondItem="Iz0-DI-D4Z" secondAttribute="leadingMargin" id="Kak-6j-szi"/>
+                            <constraint firstItem="8Gp-H9-7Hm" firstAttribute="top" secondItem="IY6-Vx-STO" secondAttribute="top" id="Rwr-7d-tI4"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="mvW-di-W0n" secondAttribute="trailing" id="STh-t4-Fjw"/>
+                            <constraint firstItem="mvW-di-W0n" firstAttribute="top" secondItem="IY6-Vx-STO" secondAttribute="top" id="b6K-sS-YH9"/>
+                            <constraint firstItem="8Gp-H9-7Hm" firstAttribute="leading" secondItem="Iz0-DI-D4Z" secondAttribute="leadingMargin" id="xR0-Vm-eoY"/>
+                        </constraints>
                         <edgeInsets key="layoutMargins" top="0.0" left="20" bottom="0.0" right="20"/>
                     </view>
                     <navigationItem key="navigationItem" title="TextKit Playground" id="QO3-c7-Cw0"/>
+                    <connections>
+                        <outlet property="label" destination="mvW-di-W0n" id="zrn-sd-JAc"/>
+                        <outlet property="textView" destination="8Gp-H9-7Hm" id="q2R-Ad-fto"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CPe-Zl-Kqh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="418" y="-53"/>
         </scene>
     </scenes>
+    <designables>
+        <designable name="8Gp-H9-7Hm">
+            <size key="intrinsicContentSize" width="350" height="198"/>
+        </designable>
+    </designables>
     <resources>
+        <systemColor name="labelColor">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemGroupedBackgroundColor">
             <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
